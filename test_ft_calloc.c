@@ -20,7 +20,7 @@ int	test_ft_calloc_0(void)
 		success += 1;
 		return (0);
 	}
-	printf("FAILED test 0.\n");
+	printf("\tFAILED test 0.\n");
 	return (1);
 }
 
@@ -40,7 +40,7 @@ int	test_ft_calloc_1(void)
 		success += 1;
 		return (0);
 	}
-	printf("FAILED test 1.\n");
+	printf("\tFAILED test 1.\n");
 	if (str1)
 		free(str1);
 	if (str2)

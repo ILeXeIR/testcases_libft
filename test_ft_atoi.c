@@ -11,7 +11,7 @@ int	test_ft_atoi(char *s)
 		success += 1;
 		return (0);
 	}
-	printf("FAILED with '%s'.\n", s);
+	printf("\tFAILED with '%s'.\n", s);
 	return (1);
 }
 
