@@ -14,5 +14,9 @@ int	main(void)
 	run_testcases_ft_memchr();
 	run_testcases_ft_memcmp();
 	run_testcases_ft_memcpy();
+	run_testcases_ft_memmove();
+	run_testcases_ft_memset();
+	run_testcases_ft_putchar_fd();
+	run_testcases_ft_putendl_fd();
 	return (0);
 }

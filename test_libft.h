@@ -21,5 +21,9 @@ void	run_testcases_ft_itoa(void);
 void	run_testcases_ft_memchr(void);
 void	run_testcases_ft_memcmp(void);
 void	run_testcases_ft_memcpy(void);
+void	run_testcases_ft_memmove(void);
+void	run_testcases_ft_memset(void);
+void	run_testcases_ft_putchar_fd(void);
+void	run_testcases_ft_putendl_fd(void);
 
 #endif
