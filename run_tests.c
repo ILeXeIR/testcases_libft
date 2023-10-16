@@ -18,5 +18,14 @@ int	main(void)
 	run_testcases_ft_memset();
 	run_testcases_ft_putchar_fd();
 	run_testcases_ft_putendl_fd();
+	run_testcases_ft_putnbr_fd();
+	run_testcases_ft_putstr_fd();
+	run_testcases_ft_split();
+	run_testcases_ft_strchr();
+	run_testcases_ft_strdup();
+	run_testcases_ft_striteri();
+	run_testcases_ft_strjoin();
+	run_testcases_ft_strlcat();
+	run_testcases_ft_strlcpy();
 	return (0);
 }

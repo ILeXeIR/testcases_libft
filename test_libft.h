@@ -7,6 +7,7 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <bsd/string.h>
 # include "../libft/libft.h"
 
 void	run_testcases_ft_atoi(void);
@@ -25,5 +26,14 @@ void	run_testcases_ft_memmove(void);
 void	run_testcases_ft_memset(void);
 void	run_testcases_ft_putchar_fd(void);
 void	run_testcases_ft_putendl_fd(void);
+void	run_testcases_ft_putnbr_fd(void);
+void	run_testcases_ft_putstr_fd(void);
+void	run_testcases_ft_split(void);
+void	run_testcases_ft_strchr(void);
+void	run_testcases_ft_strdup(void);
+void	run_testcases_ft_striteri(void);
+void	run_testcases_ft_strjoin(void);
+void	run_testcases_ft_strlcat(void);
+void	run_testcases_ft_strlcpy(void);
 
 #endif

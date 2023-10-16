@@ -3,7 +3,7 @@
 static int	test_counter = 0;
 static int	success = 0;
 
-int	test_ft_putendl_fd(char *s)
+int	test_ft_putstr_fd(char *s)
 {
 	int		fd;
 	int		len;
@@ -16,12 +16,12 @@ int	test_ft_putendl_fd(char *s)
 		printf("\tFAILED test '%d'. Can't open testfile.txt\n", test_counter);
 		return (1);
 	}
-	ft_putendl_fd(s, fd);
+	ft_putstr_fd(s, fd);
 	close(fd);
 	fd = open("testfile.txt", O_RDONLY);
-	len = read(fd, str, strlen(s) + 2);
+	len = read(fd, str, strlen(s) + 1);
 	close(fd);
-	if (len == (strlen(s) + 1) && strncmp(str, s, len - 1) == 0 && str[len - 1] == '\n')
+	if (len == strlen(s) && strncmp(str, s, len) == 0)
 	{
 		success += 1;
 		return (0);
@@ -30,12 +30,12 @@ int	test_ft_putendl_fd(char *s)
 	return (1);
 }
 
-void	run_testcases_ft_putendl_fd(void)
+void	run_testcases_ft_putstr_fd(void)
 {
-	printf("TEST 'ft_putendl_fd' started:\n");
-	test_ft_putendl_fd("abcd");
-	test_ft_putendl_fd("12345");
-	test_ft_putendl_fd("\n");
-	test_ft_putendl_fd("");
+	printf("TEST 'ft_putstr_fd' started:\n");
+	test_ft_putstr_fd("abcd");
+	test_ft_putstr_fd("12345");
+	test_ft_putstr_fd("\n");
+	test_ft_putstr_fd("");
 	printf("%d/%d tests were successful.\n", success, test_counter);
 }
