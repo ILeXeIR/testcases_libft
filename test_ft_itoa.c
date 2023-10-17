@@ -9,13 +9,14 @@ int	test_ft_itoa(int c, char *res)
 
 	test_counter += 1;
 	str = ft_itoa(c);
-	if (strcmp(str, res) == 0)
+	if (str != NULL && strcmp(str, res) == 0)
 	{
 		success += 1;
 		free(str);
 		return (0);
 	}
-	free(str);
+	if (str != NULL)
+		free(str);
 	printf("\tFAILED with '%d'.\n", c);
 	return (1);
 }

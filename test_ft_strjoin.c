@@ -9,14 +9,15 @@ int	test_ft_strjoin(char *s1, char *s2)
 
 	test_counter += 1;
 	dst = ft_strjoin(s1, s2);
-	if (strncmp(dst, s1, strlen(s1)) == 0 && strcmp(dst + strlen(s1), s2) == 0)
+	if (dst != NULL && strncmp(dst, s1, strlen(s1)) == 0 && strcmp(dst + strlen(s1), s2) == 0)
 	{
 		success += 1;
 		free(dst);
 		return (0);
 	}
 	printf("\tFAILED test '%d'.\n", test_counter);
-	free(dst);
+	if (dst != NULL)
+		free(dst);
 	return (1);
 }
 

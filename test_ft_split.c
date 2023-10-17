@@ -68,7 +68,7 @@ void	run_testcases_ft_split(void)
 	test_ft_split("", 'a', answer0);
 	test_ft_split("aaaaa", 'a', answer0);
 
-	char	*answer1[] = {"123"};
+	char	*answer1[] = {"123", NULL};
 	test_ft_split("123", '4', answer1);
 	test_ft_split("---123---", '-', answer1);
 

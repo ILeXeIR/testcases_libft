@@ -35,5 +35,14 @@ void	run_testcases_ft_striteri(void);
 void	run_testcases_ft_strjoin(void);
 void	run_testcases_ft_strlcat(void);
 void	run_testcases_ft_strlcpy(void);
+void	run_testcases_ft_strlen(void);
+void	run_testcases_ft_strmapi(void);
+void	run_testcases_ft_strncmp(void);
+void	run_testcases_ft_strnstr(void);
+void	run_testcases_ft_strrchr(void);
+void	run_testcases_ft_strtrim(void);
+void	run_testcases_ft_substr(void);
+void	run_testcases_ft_tolower(void);
+void	run_testcases_ft_toupper(void);
 
 #endif

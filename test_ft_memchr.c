@@ -24,5 +24,6 @@ void	run_testcases_ft_memchr(void)
 	test_ft_memchr("abcdef", 'a', 0);
 	test_ft_memchr("1 2 3 4", ' ', 7);
 	test_ft_memchr("abc", '\0', 4);
+	test_ft_memchr("abcdef", 'f' + 256, 6);
 	printf("%d/%d tests were successful.\n", success, test_counter);
 }

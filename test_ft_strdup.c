@@ -3,6 +3,14 @@
 static int	test_counter = 0;
 static int	success = 0;
 
+static void	free_strings(char *s1, char *s2)
+{
+	if (s1 != NULL)
+		free(s1);
+	if (s2 != NULL)
+		free(s2);
+}
+
 int	test_ft_strdup(char *s)
 {
 	char	*dst1;
@@ -11,16 +19,14 @@ int	test_ft_strdup(char *s)
 	test_counter += 1;
 	dst1 = ft_strdup(s);
 	dst2 = strdup(s);
-	if (strcmp(dst1, dst2) == 0)
+	if (dst1 != NULL && dst2 != NULL && strcmp(dst1, dst2) == 0)
 	{
 		success += 1;
-		free(dst1);
-		free(dst2);
+		free_strings(dst1, dst2);
 		return (0);
 	}
 	printf("\tFAILED test '%d'.\n", test_counter);
-	free(dst1);
-	free(dst2);
+	free_strings(dst1, dst2);
 	return (1);
 }
 
