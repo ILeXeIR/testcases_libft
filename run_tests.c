@@ -36,5 +36,15 @@ int	main(void)
 	run_testcases_ft_substr();
 	run_testcases_ft_tolower();
 	run_testcases_ft_toupper();
+	printf("\nTesting Bonus part:\n");
+	run_testcases_ft_lstnew();
+	run_testcases_ft_lstadd_front();
+	run_testcases_ft_lstsize();
+	run_testcases_ft_lstlast();
+	run_testcases_ft_lstadd_back();
+	run_testcases_ft_lstdelone();
+	run_testcases_ft_lstclear();
+	run_testcases_ft_lstiter();
+	run_testcases_ft_lstmap();
 	return (0);
 }

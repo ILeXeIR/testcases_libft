@@ -44,5 +44,14 @@ void	run_testcases_ft_strtrim(void);
 void	run_testcases_ft_substr(void);
 void	run_testcases_ft_tolower(void);
 void	run_testcases_ft_toupper(void);
+void	run_testcases_ft_lstnew(void);
+void	run_testcases_ft_lstadd_front(void);
+void	run_testcases_ft_lstsize(void);
+void	run_testcases_ft_lstlast(void);
+void	run_testcases_ft_lstadd_back(void);
+void	run_testcases_ft_lstdelone(void);
+void	run_testcases_ft_lstclear(void);
+void	run_testcases_ft_lstiter(void);
+void	run_testcases_ft_lstmap(void);
 
 #endif
