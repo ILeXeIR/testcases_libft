@@ -1,4 +1,4 @@
-#include "../ft_printf/ft_printf.h"
+#include "../../ft_printf/ft_printf.h"
 #include <stdio.h>
 
 void	test_ft_printf(void)
@@ -20,6 +20,8 @@ void	test_ft_printf(void)
 	printf("%s!\n\n", "");
 	ft_printf("$$$%s!\n", "abc");
 	printf("$$$%s!\n\n", "abc");
+	ft_printf("%s!\n", NULL);
+	printf("%s!\n\n", NULL);
 
 	ft_printf("Test u:\n");
 	ft_printf("%u!\n", 0);
@@ -44,6 +46,8 @@ void	test_ft_printf(void)
 	printf("%p!\n\n", NULL);
 	ft_printf("__%p__!\n", "abc");
 	printf("__%p__!\n\n", "abc");
+	ft_printf("__%p__!\n", &malloc);
+	printf("__%p__!\n\n", &malloc);
 
 	ft_printf("Test d:\n");
 	ft_printf("%d!\n", 0);
@@ -95,6 +99,12 @@ void	test_ft_printf(void)
 	printf("%-10s!%10s!\n\n", "abc", "def");
 	ft_printf("%-10s%c\n", "abc", '!');
 	printf("%-10s%c\n\n", "abc", '!');
+	ft_printf("%-10s!\n", NULL);
+	printf("%-10s!\n\n", NULL);
+	ft_printf("%.5s!\n", NULL);
+	printf("%.5s!\n\n", NULL);
+	ft_printf("%10.6s!\n", NULL);
+	printf("%10.6s!\n\n", NULL);
 	
 	ft_printf("Test u:\n");
 	ft_printf("%-10u!\n", 0xFFFFFFFF);
@@ -343,6 +353,10 @@ void	test_ft_printf(void)
 	printf("%-+5.3d!\n\n", 0);
 	ft_printf("%0+5.3d!\n", 0);
 	printf("%0+5.3d!\n\n", 0);
+	ft_printf("%-3d!\n", 0);
+	printf("%-3d!\n\n", 0);
+	ft_printf("%-3.d!\n", 0);
+	printf("%-3.d!\n\n", 0);
 
 	ft_printf("Mixed test:\n");
 	ft_printf("%+- 10%:%10d!\n", 5);
