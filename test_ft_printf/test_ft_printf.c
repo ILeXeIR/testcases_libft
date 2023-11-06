@@ -561,6 +561,18 @@ void	test_ft_printf(void)
 	x1 = ft_printf("%-3.d!\n", 0);
 	x2 = printf("%-3.d!\n", 0);
 	assert_values(x1, x2);
+	x1 = ft_printf("%.d!\n", 0);
+	x2 = printf("%.d!\n", 0);
+	assert_values(x1, x2);
+	x1 = ft_printf("% .d!\n", 0);
+	x2 = printf("% .d!\n", 0);
+	assert_values(x1, x2);
+	x1 = ft_printf("%+.d!\n", 0);
+	x2 = printf("%+.d!\n", 0);
+	assert_values(x1, x2);
+	x1 = ft_printf("%1.d!\n", 0);
+	x2 = printf("%1.d!\n", 0);
+	assert_values(x1, x2);
 
 	ft_printf("Mixed test:\n");
 	x1 = ft_printf("%+- 10%:%10d!\n", 5);
