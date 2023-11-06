@@ -1,5 +1,6 @@
 #include "../../ft_printf/ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 static void	assert_values(int x1, int x2)
 {
@@ -48,7 +49,7 @@ void	test_ft_printf(void)
 	x2 = printf("$$$%s!\n", "abc");
 	assert_values(x1, x2);
 	x1 = ft_printf("%s!\n", NULL);
-	x2 = printf("%s!\n", (char*)NULL);
+	x2 = printf("%s!\n", (char *) NULL);
 	assert_values(x1, x2);
 
 	ft_printf("Test u:\n");
@@ -84,6 +85,21 @@ void	test_ft_printf(void)
 	assert_values(x1, x2);
 	x1 = ft_printf("__%p__!\n", &malloc);
 	x2 = printf("__%p__!\n", &malloc);
+	assert_values(x1, x2);
+	x1 = ft_printf("__%p__!\n", &x1);
+	x2 = printf("__%p__!\n", &x1);
+	assert_values(x1, x2);
+	x1 = ft_printf("__%p__!\n", ULONG_MAX);
+	x2 = printf("__%p__!\n", (void *)ULONG_MAX);
+	assert_values(x1, x2);
+	x1 = ft_printf("__%p__!\n", LONG_MIN);
+	x2 = printf("__%p__!\n", (void *)LONG_MIN);
+	assert_values(x1, x2);
+	x1 = ft_printf("__%p__!\n", UINT_MAX);
+	x2 = printf("__%p__!\n", (void *)UINT_MAX);
+	assert_values(x1, x2);
+	x1 = ft_printf("__%p__!\n", (unsigned long)UINT_MAX + 1);
+	x2 = printf("__%p__!\n", (void *)((unsigned long)UINT_MAX + 1));
 	assert_values(x1, x2);
 
 	ft_printf("Test d:\n");
@@ -155,13 +171,13 @@ void	test_ft_printf(void)
 	x2 = printf("%-10s%c\n", "abc", '!');
 	assert_values(x1, x2);
 	x1 = ft_printf("%-10s!\n", NULL);
-	x2 = printf("%-10s!\n", (char*)NULL);
+	x2 = printf("%-10s!\n", (char *) NULL);
 	assert_values(x1, x2);
 	x1 = ft_printf("%.5s!\n", NULL);
-	x2 = printf("%.5s!\n", (char*)NULL);
+	x2 = printf("%.5s!\n", (char *) NULL);
 	assert_values(x1, x2);
 	x1 = ft_printf("%10.6s!\n", NULL);
-	x2 = printf("%10.6s!\n", (char*)NULL);
+	x2 = printf("%10.6s!\n", (char *) NULL);
 	assert_values(x1, x2);
 	
 	ft_printf("Test u:\n");
@@ -341,6 +357,12 @@ void	test_ft_printf(void)
 	assert_values(x1, x2);
 	x1 = ft_printf("%10p!\n", NULL);
 	x2 = printf("%10p!\n", NULL);
+	assert_values(x1, x2);
+	x1 = ft_printf("%25p!\n", &x1);
+	x2 = printf("%25p!\n", &x1);
+	assert_values(x1, x2);
+	x1 = ft_printf("%-25p!\n", &x1);
+	x2 = printf("%-25p!\n", &x1);
 	assert_values(x1, x2);
 
 	ft_printf("Test d and i:\n");
